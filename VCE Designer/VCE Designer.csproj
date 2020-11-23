@@ -92,5 +92,8 @@
   <ItemGroup>
     <None Include="Resources\shutdown_off_close_exit_15253.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
