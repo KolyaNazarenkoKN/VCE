@@ -86,7 +86,7 @@
             // 
             this.відкритиToolStripMenuItem.Image = global::VCE_Designer.Properties.Resources.open_file_40455;
             this.відкритиToolStripMenuItem.Name = "відкритиToolStripMenuItem";
-            this.відкритиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.відкритиToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.відкритиToolStripMenuItem.Text = "Відкрити ";
             this.відкритиToolStripMenuItem.Click += new System.EventHandler(this.відкритиToolStripMenuItem_Click);
             // 
@@ -94,7 +94,7 @@
             // 
             this.зберегтиToolStripMenuItem.Image = global::VCE_Designer.Properties.Resources.save_file_disk_open_searsh_loading_clipboard_1513;
             this.зберегтиToolStripMenuItem.Name = "зберегтиToolStripMenuItem";
-            this.зберегтиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.зберегтиToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.зберегтиToolStripMenuItem.Text = "Зберегти XML";
             this.зберегтиToolStripMenuItem.Click += new System.EventHandler(this.зберегтиToolStripMenuItem_Click);
             // 
@@ -102,13 +102,13 @@
             // 
             this.вихідToolStripMenuItem.Image = global::VCE_Designer.Properties.Resources.shutdown_off_close_exit_15253;
             this.вихідToolStripMenuItem.Name = "вихідToolStripMenuItem";
-            this.вихідToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.вихідToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.вихідToolStripMenuItem.Text = "Вихід";
             this.вихідToolStripMenuItem.Click += new System.EventHandler(this.вихідToolStripMenuItem_Click);
             // 
             // textBox_NameQuestion
             // 
-            this.textBox_NameQuestion.Location = new System.Drawing.Point(509, 244);
+            this.textBox_NameQuestion.Location = new System.Drawing.Point(514, 238);
             this.textBox_NameQuestion.Name = "textBox_NameQuestion";
             this.textBox_NameQuestion.Size = new System.Drawing.Size(188, 20);
             this.textBox_NameQuestion.TabIndex = 1;
@@ -117,7 +117,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(443, 140);
+            this.label1.Location = new System.Drawing.Point(448, 134);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(254, 29);
             this.label1.TabIndex = 2;
@@ -130,7 +130,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(445, 246);
+            this.label2.Location = new System.Drawing.Point(450, 240);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 3;
@@ -139,7 +139,7 @@
             // button_nextquestion
             // 
             this.button_nextquestion.BackColor = System.Drawing.SystemColors.Window;
-            this.button_nextquestion.Location = new System.Drawing.Point(432, 335);
+            this.button_nextquestion.Location = new System.Drawing.Point(437, 329);
             this.button_nextquestion.Name = "button_nextquestion";
             this.button_nextquestion.Size = new System.Drawing.Size(137, 23);
             this.button_nextquestion.TabIndex = 4;
@@ -150,7 +150,7 @@
             // button_ok
             // 
             this.button_ok.BackColor = System.Drawing.SystemColors.Window;
-            this.button_ok.Location = new System.Drawing.Point(575, 335);
+            this.button_ok.Location = new System.Drawing.Point(580, 329);
             this.button_ok.Name = "button_ok";
             this.button_ok.Size = new System.Drawing.Size(137, 23);
             this.button_ok.TabIndex = 4;
@@ -161,7 +161,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(445, 270);
+            this.label3.Location = new System.Drawing.Point(450, 264);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 13);
             this.label3.TabIndex = 3;
@@ -169,7 +169,7 @@
             // 
             // textBox_Description
             // 
-            this.textBox_Description.Location = new System.Drawing.Point(509, 270);
+            this.textBox_Description.Location = new System.Drawing.Point(514, 264);
             this.textBox_Description.Name = "textBox_Description";
             this.textBox_Description.Size = new System.Drawing.Size(188, 20);
             this.textBox_Description.TabIndex = 1;
@@ -177,7 +177,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(435, 214);
+            this.label4.Location = new System.Drawing.Point(440, 208);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 13);
             this.label4.TabIndex = 6;
@@ -185,7 +185,7 @@
             // 
             // textBox_TestName
             // 
-            this.textBox_TestName.Location = new System.Drawing.Point(509, 211);
+            this.textBox_TestName.Location = new System.Drawing.Point(514, 205);
             this.textBox_TestName.Name = "textBox_TestName";
             this.textBox_TestName.Size = new System.Drawing.Size(188, 20);
             this.textBox_TestName.TabIndex = 5;
@@ -193,7 +193,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(429, 188);
+            this.label5.Location = new System.Drawing.Point(434, 182);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 13);
             this.label5.TabIndex = 8;
@@ -201,7 +201,7 @@
             // 
             // textBox_nameauthor
             // 
-            this.textBox_nameauthor.Location = new System.Drawing.Point(509, 185);
+            this.textBox_nameauthor.Location = new System.Drawing.Point(514, 179);
             this.textBox_nameauthor.Name = "textBox_nameauthor";
             this.textBox_nameauthor.Size = new System.Drawing.Size(188, 20);
             this.textBox_nameauthor.TabIndex = 7;
@@ -210,7 +210,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Black;
             this.button1.ForeColor = System.Drawing.SystemColors.Window;
-            this.button1.Location = new System.Drawing.Point(480, 296);
+            this.button1.Location = new System.Drawing.Point(485, 290);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(188, 33);
             this.button1.TabIndex = 9;
@@ -252,12 +252,13 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.Window;
+            this.button3.BackColor = System.Drawing.Color.Black;
+            this.button3.ForeColor = System.Drawing.SystemColors.Window;
             this.button3.Location = new System.Drawing.Point(167, 358);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(137, 23);
             this.button3.TabIndex = 15;
-            this.button3.Text = "Готово";
+            this.button3.Text = "Зберегти зміни";
             this.button3.UseVisualStyleBackColor = false;
             // 
             // button4

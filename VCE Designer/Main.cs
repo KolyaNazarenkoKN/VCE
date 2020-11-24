@@ -56,7 +56,7 @@ namespace VCE_Designer
             using (FileStream fs = new FileStream(filename, FileMode.OpenOrCreate))
             {
                 Body newBody = (Body)formatter.Deserialize(fs);
-
+              
             }
             MessageBox.Show("Файл відкрито", "Успішно!",
                 MessageBoxButtons.OK,
@@ -112,5 +112,7 @@ namespace VCE_Designer
             question.Answer.Add(answer);
             textBox_Description.Text = "";
         }
+
+       
     }
 }
