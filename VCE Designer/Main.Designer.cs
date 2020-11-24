@@ -1,6 +1,6 @@
 ﻿namespace VCE_Designer
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         /// Required designer variable.
@@ -28,15 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.відкритиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.створитиНовийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.зберегтиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вихідToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.оНасToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBox_nametest = new System.Windows.Forms.TextBox();
+            this.textBox_NameQuestion = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -44,19 +43,18 @@
             this.button_nextquestion = new System.Windows.Forms.Button();
             this.button_ok = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox_question = new System.Windows.Forms.TextBox();
+            this.textBox_Description = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_TestName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox_nameauthor = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.файлToolStripMenuItem,
-            this.оНасToolStripMenuItem});
+            this.файлToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -88,6 +86,7 @@
             this.створитиНовийToolStripMenuItem.Name = "створитиНовийToolStripMenuItem";
             this.створитиНовийToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.створитиНовийToolStripMenuItem.Text = "Створити новий";
+            this.створитиНовийToolStripMenuItem.Click += new System.EventHandler(this.створитиНовийToolStripMenuItem_Click);
             // 
             // зберегтиToolStripMenuItem
             // 
@@ -105,18 +104,12 @@
             this.вихідToolStripMenuItem.Text = "Вихід";
             this.вихідToolStripMenuItem.Click += new System.EventHandler(this.вихідToolStripMenuItem_Click);
             // 
-            // оНасToolStripMenuItem
+            // textBox_NameQuestion
             // 
-            this.оНасToolStripMenuItem.Name = "оНасToolStripMenuItem";
-            this.оНасToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.оНасToolStripMenuItem.Text = "О нас";
-            // 
-            // textBox_nametest
-            // 
-            this.textBox_nametest.Location = new System.Drawing.Point(526, 233);
-            this.textBox_nametest.Name = "textBox_nametest";
-            this.textBox_nametest.Size = new System.Drawing.Size(188, 20);
-            this.textBox_nametest.TabIndex = 1;
+            this.textBox_NameQuestion.Location = new System.Drawing.Point(526, 233);
+            this.textBox_NameQuestion.Name = "textBox_NameQuestion";
+            this.textBox_NameQuestion.Size = new System.Drawing.Size(188, 20);
+            this.textBox_NameQuestion.TabIndex = 1;
             // 
             // label1
             // 
@@ -143,22 +136,24 @@
             // 
             // button_nextquestion
             // 
+            this.button_nextquestion.BackColor = System.Drawing.SystemColors.Window;
             this.button_nextquestion.Location = new System.Drawing.Point(456, 294);
             this.button_nextquestion.Name = "button_nextquestion";
             this.button_nextquestion.Size = new System.Drawing.Size(137, 23);
             this.button_nextquestion.TabIndex = 4;
             this.button_nextquestion.Text = "Наступне питання";
-            this.button_nextquestion.UseVisualStyleBackColor = true;
+            this.button_nextquestion.UseVisualStyleBackColor = false;
             this.button_nextquestion.Click += new System.EventHandler(this.button_nextquestion_Click);
             // 
             // button_ok
             // 
+            this.button_ok.BackColor = System.Drawing.SystemColors.Window;
             this.button_ok.Location = new System.Drawing.Point(599, 294);
             this.button_ok.Name = "button_ok";
             this.button_ok.Size = new System.Drawing.Size(137, 23);
             this.button_ok.TabIndex = 4;
             this.button_ok.Text = "Готово";
-            this.button_ok.UseVisualStyleBackColor = true;
+            this.button_ok.UseVisualStyleBackColor = false;
             this.button_ok.Click += new System.EventHandler(this.button_ok_Click);
             // 
             // label3
@@ -170,12 +165,12 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Відповідь";
             // 
-            // textBox_question
+            // textBox_Description
             // 
-            this.textBox_question.Location = new System.Drawing.Point(526, 259);
-            this.textBox_question.Name = "textBox_question";
-            this.textBox_question.Size = new System.Drawing.Size(188, 20);
-            this.textBox_question.TabIndex = 1;
+            this.textBox_Description.Location = new System.Drawing.Point(526, 259);
+            this.textBox_Description.Name = "textBox_Description";
+            this.textBox_Description.Size = new System.Drawing.Size(188, 20);
+            this.textBox_Description.TabIndex = 1;
             // 
             // label4
             // 
@@ -186,12 +181,12 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Назва тесту";
             // 
-            // textBox1
+            // textBox_TestName
             // 
-            this.textBox1.Location = new System.Drawing.Point(526, 200);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(188, 20);
-            this.textBox1.TabIndex = 5;
+            this.textBox_TestName.Location = new System.Drawing.Point(526, 200);
+            this.textBox_TestName.Name = "textBox_TestName";
+            this.textBox_TestName.Size = new System.Drawing.Size(188, 20);
+            this.textBox_TestName.TabIndex = 5;
             // 
             // label5
             // 
@@ -202,14 +197,14 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Назва автора";
             // 
-            // textBox2
+            // textBox_nameauthor
             // 
-            this.textBox2.Location = new System.Drawing.Point(526, 174);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(188, 20);
-            this.textBox2.TabIndex = 7;
+            this.textBox_nameauthor.Location = new System.Drawing.Point(526, 174);
+            this.textBox_nameauthor.Name = "textBox_nameauthor";
+            this.textBox_nameauthor.Size = new System.Drawing.Size(188, 20);
+            this.textBox_nameauthor.TabIndex = 7;
             // 
-            // Form1
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -217,22 +212,22 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox_nameauthor);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_TestName);
             this.Controls.Add(this.button_ok);
             this.Controls.Add(this.button_nextquestion);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox_question);
-            this.Controls.Add(this.textBox_nametest);
+            this.Controls.Add(this.textBox_Description);
+            this.Controls.Add(this.textBox_NameQuestion);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Designer";
             this.menuStrip1.ResumeLayout(false);
@@ -250,8 +245,7 @@
         private System.Windows.Forms.ToolStripMenuItem створитиНовийToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem зберегтиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem вихідToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem оНасToolStripMenuItem;
-        private System.Windows.Forms.TextBox textBox_nametest;
+        private System.Windows.Forms.TextBox textBox_NameQuestion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
@@ -259,11 +253,11 @@
         private System.Windows.Forms.Button button_nextquestion;
         private System.Windows.Forms.Button button_ok;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox_question;
+        private System.Windows.Forms.TextBox textBox_Description;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_TestName;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox_nameauthor;
     }
 }
 
