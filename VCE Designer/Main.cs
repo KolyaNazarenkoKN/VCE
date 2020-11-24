@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
@@ -19,9 +20,11 @@ namespace VCE_Designer
     public partial class Main : Form
     {
         Body body = new Body();
+        Question question = new Question();
         public Main()
         {
             InitializeComponent();
+            question.Answer = new List<Answer>();
             body.Question = new List<Question>();
         }
 
@@ -75,18 +78,12 @@ namespace VCE_Designer
             string Description = textBox_Description.Text;
             body.Author = author;
             body.TestName = NameTest;
-            Question question = new Question();
-            question.Answer = new List<Answer>();
-            Answer answer = new Answer();
             question.NameQuestion = NameQuestion;
-            answer.Description = Description;
-            question.Answer.Add(answer);
             body.Question.Add(question);
             textBox_nameauthor.Text = "";
             textBox_TestName.Text = "";
             textBox_NameQuestion.Text = "";
             textBox_Description.Text = "";
-
 
         }
 
@@ -106,10 +103,14 @@ namespace VCE_Designer
             textBox_Description.Text = "";
         }
 
-        private void створитиНовийToolStripMenuItem_Click(object sender, EventArgs e)
+        
+        private void button1_Click(object sender, EventArgs e)
         {
-            NewTest newTest = new NewTest();
-            newTest.Show();
+            string Description = textBox_Description.Text;
+            Answer answer = new Answer();
+            answer.Description = "Hello";
+            question.Answer.Add(answer);
+            textBox_Description.Text = "";
         }
     }
 }
