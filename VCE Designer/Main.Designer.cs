@@ -76,7 +76,7 @@
             // 
             this.відкритиToolStripMenuItem.Image = global::VCE_Designer.Properties.Resources.open_file_40455;
             this.відкритиToolStripMenuItem.Name = "відкритиToolStripMenuItem";
-            this.відкритиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.відкритиToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.відкритиToolStripMenuItem.Text = "Відкрити ";
             this.відкритиToolStripMenuItem.Click += new System.EventHandler(this.відкритиToolStripMenuItem_Click);
             // 
@@ -84,7 +84,7 @@
             // 
             this.створитиНовийToolStripMenuItem.Image = global::VCE_Designer.Properties.Resources.new_file_40454;
             this.створитиНовийToolStripMenuItem.Name = "створитиНовийToolStripMenuItem";
-            this.створитиНовийToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.створитиНовийToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.створитиНовийToolStripMenuItem.Text = "Створити новий";
             this.створитиНовийToolStripMenuItem.Click += new System.EventHandler(this.створитиНовийToolStripMenuItem_Click);
             // 
@@ -92,7 +92,7 @@
             // 
             this.зберегтиToolStripMenuItem.Image = global::VCE_Designer.Properties.Resources.save_file_disk_open_searsh_loading_clipboard_1513;
             this.зберегтиToolStripMenuItem.Name = "зберегтиToolStripMenuItem";
-            this.зберегтиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.зберегтиToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.зберегтиToolStripMenuItem.Text = "Зберегти XML";
             this.зберегтиToolStripMenuItem.Click += new System.EventHandler(this.зберегтиToolStripMenuItem_Click);
             // 
@@ -100,7 +100,7 @@
             // 
             this.вихідToolStripMenuItem.Image = global::VCE_Designer.Properties.Resources.shutdown_off_close_exit_15253;
             this.вихідToolStripMenuItem.Name = "вихідToolStripMenuItem";
-            this.вихідToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.вихідToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.вихідToolStripMenuItem.Text = "Вихід";
             this.вихідToolStripMenuItem.Click += new System.EventHandler(this.вихідToolStripMenuItem_Click);
             // 
@@ -229,7 +229,7 @@
             this.MinimizeBox = false;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Designer";
+            this.Text = "VCE Designer";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
