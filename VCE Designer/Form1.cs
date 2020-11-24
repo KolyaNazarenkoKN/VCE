@@ -3,33 +3,39 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
+using System.Xml.Serialization;
 using Xml2CSharp;
 
 namespace VCE_Designer
 {
+
     public partial class Form1 : Form
     {
+        Body body = new Body();
         public Form1()
         {
             InitializeComponent();
+            body.Question = new List<Question>();
         }
 
         private void зберегтиToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Body body = new Body();
-            saveFileDialog1.Filter = "XML files(*.xml)|*.xml|All files(*.*)|*.*";
-            if (saveFileDialog1.ShowDialog() == DialogResult.Cancel)
-                return;
-            NewQuestion();
-            string filename = saveFileDialog1.FileName;
-            System.IO.File.WriteAllText(filename, "");
-            MessageBox.Show("Файл збережен");
+            XmlSerializer formatter = new XmlSerializer(typeof(Body));
+
+            // получаем поток, куда будем записывать сериализованный объект
+            using (FileStream fs = new FileStream("NewTest.xml", FileMode.OpenOrCreate))
+            {
+                formatter.Serialize(fs, body);
+
+            }
+
         }
 
         private void відкритиToolStripMenuItem_Click(object sender, EventArgs e)
@@ -53,43 +59,27 @@ namespace VCE_Designer
         private void NewQuestion()
         {
             Question question = new Question();
-            Body body = new Body();
-            XmlDocument Doc = new XmlDocument();
-            XmlDeclaration dec = Doc.CreateXmlDeclaration("1.0", null, null);
-            Doc.AppendChild(dec);
-            XmlElement DocRoot = Doc.CreateElement(body.ToString());
-            Doc.AppendChild(DocRoot);
-
-            XmlNode server = Doc.CreateElement(body.Question.Difficulty);
-            DocRoot.AppendChild(server);
-            server.InnerText = this.textBox_nametest.Text;
-
-            XmlNode server2 = Doc.CreateElement(body.Question.Description);
-            DocRoot.AppendChild(server2);
-            server2.InnerText = this.textBox_question.Text;
-
-            Doc.Save(Application.StartupPath + "\\xmlfile.xml");
+            
 
         }
 
         private void button_ok_Click(object sender, EventArgs e)
         {
+           
             Question question = new Question();
-            Body body = new Body();
-            //XElement doc = new XElement("question",
-            //   new XElement(body.Question.Difficulty, textBox_nametest.Text),
-            //   new XElement(body.Question.Description, textBox_question.Text)
-            //   );
+            question.Answer = new List<Answer>();
+            Answer answer = new Answer();
+            question.NameQuestion = textBox_nametest.Text;
+            answer.Description = textBox_question.Text;
+            question.Answer.Add(answer);
+            body.Question.Add(question);
 
-            //string filename = saveFileDialog1.FileName;
-            //doc.Save(filename);
 
         }
 
         private void button_nextquestion_Click(object sender, EventArgs e)
         {
-            Question question = new Question();
-            question.Description = textBox_question.Text;
+         
 
 
         }

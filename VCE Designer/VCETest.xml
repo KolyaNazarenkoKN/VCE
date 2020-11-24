@@ -1,14 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <body>
+  <Author></Author>
+  <TestName></TestName>
   <question>
-    <difficulty></difficulty>
-    <description> </description>
+    <NameQuestion></NameQuestion>
+    <answer>
+      <isright></isright>
+      <description></description>
+    </answer>
+    <answer>
+      <isright></isright>
+      <description></description>
+    </answer>
   </question>
-  <answer>
-    <enabled></enabled>
-    <isright></isright>
-    <position/>
-    <description></description>
-  </answer>
-
+  <question>
+    <NameQuestion></NameQuestion>
+    <answer>
+      <isright></isright>
+      <description></description>
+    </answer>
+    <answer>
+      <isright></isright>
+      <description></description>
+    </answer>
+  </question>
 </body>

@@ -8,35 +8,33 @@ using System.Xml.Serialization;
 using System.Collections.Generic;
 namespace Xml2CSharp
 {
-	[XmlRoot(ElementName = "question")]
-	public class Question
+	[XmlRoot(ElementName = "answer")]
+	public class Answer
 	{
-		[XmlElement(ElementName = "difficulty")]
-		public string Difficulty { get; set; }
+		[XmlElement(ElementName = "isright")]
+		public string Isright { get; set; }
 		[XmlElement(ElementName = "description")]
 		public string Description { get; set; }
 	}
 
-	[XmlRoot(ElementName = "answer")]
-	public class Answer
+	[XmlRoot(ElementName = "question")]
+	public class Question
 	{
-		[XmlElement(ElementName = "enabled")]
-		public string Enabled { get; set; }
-		[XmlElement(ElementName = "isright")]
-		public string Isright { get; set; }
-		[XmlElement(ElementName = "position")]
-		public string Position { get; set; }
-		[XmlElement(ElementName = "description")]
-		public string Description { get; set; }
+		[XmlElement(ElementName = "NameQuestion")]
+		public string NameQuestion { get; set; }
+		[XmlElement(ElementName = "answer")]
+		public List<Answer> Answer { get; set; }
 	}
 
 	[XmlRoot(ElementName = "body")]
 	public class Body
 	{
+		[XmlElement(ElementName = "Author")]
+		public string Author { get; set; }
+		[XmlElement(ElementName = "TestName")]
+		public string TestName { get; set; }
 		[XmlElement(ElementName = "question")]
-		public Question Question { get; set; }
-		[XmlElement(ElementName = "answer")]
-		public Answer Answer { get; set; }
+		public List<Question> Question { get; set; }
 	}
 
 }
