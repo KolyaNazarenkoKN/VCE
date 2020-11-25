@@ -21,11 +21,13 @@ namespace VCE_Designer
     {
         Body body = new Body();
         Question question = new Question();
+        Answer answer = new Answer();
         public Main()
         {
             InitializeComponent();
             question.Answer = new List<Answer>();
             body.Question = new List<Question>();
+           
         }
 
         private void зберегтиToolStripMenuItem_Click(object sender, EventArgs e)
@@ -76,10 +78,10 @@ namespace VCE_Designer
             }
             MessageBox.Show("Файл відкрито!", "Успішно",
                 MessageBoxButtons.OK,
-                MessageBoxIcon.Information);    
-     
+                MessageBoxIcon.Information);
+
         }
-    
+
         private void вихідToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -92,32 +94,32 @@ namespace VCE_Designer
             string author = textBox_nameauthor.Text;
             string NameTest = textBox_TestName.Text;
             string NameQuestion = textBox_NameQuestion.Text;
-            string Description = textBox_Description.Text;
             body.Author = author;
             body.TestName = NameTest;
             question.NameQuestion = NameQuestion;
-            Answer answer = new Answer();
-            answer.Description = Description;
+  
+
             body.Question.Add(question);
-            textBox_nameauthor.Text = "";
-            textBox_TestName.Text = "";
-            textBox_NameQuestion.Text = "";
-            textBox_Description.Text = "";
+
 
         }
 
         private void button_nextquestion_Click(object sender, EventArgs e)
         {
 
-            string NameQuestion = textBox_NameQuestion.Text;
-            string Description = textBox_Description.Text;
             Question question = new Question();
             question.Answer = new List<Answer>();
             Answer answer = new Answer();
-            question.NameQuestion = NameQuestion;
+
+            string NameQuestion = textBox_NameQuestion.Text;
+            string Description = textBox_Description.Text;
+
+
             answer.Description = Description;
-            question.Answer.Add(answer);
+            question.NameQuestion = NameQuestion;
+
             body.Question.Add(question);
+
             textBox_NameQuestion.Text = "";
             textBox_Description.Text = "";
         }
@@ -125,21 +127,7 @@ namespace VCE_Designer
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string Description = textBox_Description.Text;
-            string isRight = textBox_Description.Text;
-            Answer answer = new Answer();
-            if (checkBox1.Checked == true)
-            {
-                answer.Isright = isRight;
-              
-
-            }
-            else
-            {
-                answer.Description = Description;
-           
-            }
-            question.Answer.Add(answer);
+            
             textBox_Description.Text = "";
         }
 
@@ -166,6 +154,19 @@ namespace VCE_Designer
             MessageBox.Show("Файл змінений!", "Успішно",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            question.Answer = new List<Answer>();
+         
+            string Description = textBox_Description.Text;
+            if (checkBox1.Checked == true)
+                answer.Isright = Description;
+            else
+                answer.Description = Description;
+            question.Answer.Add(answer);
+
         }
     }
 }
