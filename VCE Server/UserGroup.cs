@@ -10,5 +10,10 @@ namespace VCE_Server
     {
         public int IdUser { get; set; }
         public int IdGroup { get; set; }
+        public virtual ICollection<User> Users { get; set; }
+        UserGroup()
+        {
+            Users = new List<User>();
+        }
     }
 }

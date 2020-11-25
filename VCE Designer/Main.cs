@@ -124,8 +124,19 @@ namespace VCE_Designer
         private void button1_Click(object sender, EventArgs e)
         {
             string Description = textBox_Description.Text;
+            string isRight = textBox_Description.Text;
             Answer answer = new Answer();
-            answer.Description = Description;
+            if (checkBox1.Checked == true)
+            {
+                answer.Isright = isRight;
+              
+
+            }
+            else
+            {
+                answer.Description = Description;
+           
+            }
             question.Answer.Add(answer);
             textBox_Description.Text = "";
         }

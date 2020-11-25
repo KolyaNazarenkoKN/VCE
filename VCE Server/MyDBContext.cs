@@ -15,6 +15,8 @@ namespace VCE_Server
         }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<UserGroup> UserGroups { get; set; }
+        public virtual DbSet<Answer> Answers { get; set; }
+        public virtual DbSet<UserAnswer> UserAnswers { get; set; }
     }
 
    

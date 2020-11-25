@@ -31,7 +31,7 @@ namespace VCE_Server
          MessageBoxButtons.OK,
          MessageBoxIcon.Error);
             }
-            this.Hide();
+            //this.Hide();
         }
     }
 }

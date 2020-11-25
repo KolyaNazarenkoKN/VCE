@@ -59,6 +59,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -139,7 +140,7 @@
             // button_nextquestion
             // 
             this.button_nextquestion.BackColor = System.Drawing.SystemColors.Window;
-            this.button_nextquestion.Location = new System.Drawing.Point(437, 329);
+            this.button_nextquestion.Location = new System.Drawing.Point(453, 355);
             this.button_nextquestion.Name = "button_nextquestion";
             this.button_nextquestion.Size = new System.Drawing.Size(137, 23);
             this.button_nextquestion.TabIndex = 4;
@@ -150,7 +151,7 @@
             // button_ok
             // 
             this.button_ok.BackColor = System.Drawing.SystemColors.Window;
-            this.button_ok.Location = new System.Drawing.Point(580, 329);
+            this.button_ok.Location = new System.Drawing.Point(596, 355);
             this.button_ok.Name = "button_ok";
             this.button_ok.Size = new System.Drawing.Size(137, 23);
             this.button_ok.TabIndex = 4;
@@ -210,7 +211,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Black;
             this.button1.ForeColor = System.Drawing.SystemColors.Window;
-            this.button1.Location = new System.Drawing.Point(485, 290);
+            this.button1.Location = new System.Drawing.Point(502, 313);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(188, 33);
             this.button1.TabIndex = 9;
@@ -314,6 +315,16 @@
             this.textBox4.Size = new System.Drawing.Size(188, 20);
             this.textBox4.TabIndex = 11;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(535, 290);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(131, 17);
+            this.checkBox1.TabIndex = 21;
+            this.checkBox1.Text = "Правильна відповідь";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -321,6 +332,7 @@
             this.BackgroundImage = global::VCE_Designer.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label7);
@@ -391,6 +403,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 
