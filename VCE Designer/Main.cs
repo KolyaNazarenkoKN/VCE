@@ -96,6 +96,8 @@ namespace VCE_Designer
             body.Author = author;
             body.TestName = NameTest;
             question.NameQuestion = NameQuestion;
+            Answer answer = new Answer();
+            answer.Description = Description;
             body.Question.Add(question);
             textBox_nameauthor.Text = "";
             textBox_TestName.Text = "";
