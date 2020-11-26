@@ -30,7 +30,7 @@ namespace VCE_Server
                 User user = new User() { Name = textBox1.Text, Password = textBox2.Text };
                 dBContext.Users.Add(user);
                 dBContext.SaveChanges();
-                MessageBox.Show("Added");
+                MessageBox.Show("Успішно!");
             }
         }
     }

@@ -15,6 +15,7 @@ namespace VCE_Server
     public partial class Main : Form
     {
         NewStudent student = new NewStudent();
+        NewGroup newGroup = new NewGroup();
         public Main()
         {
             InitializeComponent();
@@ -34,6 +35,11 @@ namespace VCE_Server
         {
 
             student.Show();
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            newGroup.Show();
         }
     }
 }
