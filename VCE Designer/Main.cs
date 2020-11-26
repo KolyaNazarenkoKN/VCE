@@ -55,27 +55,27 @@ namespace VCE_Designer
                 return;
             string filename = openFileDialog1.FileName;
             XmlSerializer formatter = new XmlSerializer(typeof(Body));
-            XElement xml = XElement.Load(openFileDialog1.OpenFile());
-            var Author = xml.Descendants("Author").Select(t => t.Value);
-            foreach (var element in Author)
-            {
-                textBox1.Text = element;
-            }
-            var TestName = xml.Descendants("TestName").Select(t => t.Value);
-            foreach (var element in TestName)
-            {
-                textBox2.Text = element;
-            }
-            var NameQuestion = xml.Descendants("NameQuestion").Select(t => t.Value);
-            foreach (var element in NameQuestion)
-            {
-                textBox4.Text = element;
-            }
-            var description = xml.Descendants("description").Select(t => t.Value);
-            foreach (var element in description)
-            {
-                textBox3.Text = element;
-            }
+            //XElement xml = XElement.Load(openFileDialog1.OpenFile());
+            //var Author = xml.Descendants("Author").Select(t => t.Value);
+            //foreach (var element in Author)
+            //{
+            //    textBox1.Text = element;
+            //}
+            //var TestName = xml.Descendants("TestName").Select(t => t.Value);
+            //foreach (var element in TestName)
+            //{
+            //    textBox2.Text = element;
+            //}
+            //var NameQuestion = xml.Descendants("NameQuestion").Select(t => t.Value);
+            //foreach (var element in NameQuestion)
+            //{
+            //    textBox4.Text = element;
+            //}
+            //var description = xml.Descendants("description").Select(t => t.Value);
+            //foreach (var element in description)
+            //{
+            //    textBox3.Text = element;
+            //}
             MessageBox.Show("Файл відкрито!", "Успішно",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
@@ -127,8 +127,16 @@ namespace VCE_Designer
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            textBox_Description.Text = "";
+            question.Answer = new List<Answer>();
+
+            string Description = textBox_Description.Text;
+            if (checkBox1.Checked == true)
+                answer.Isright = Description;
+            else
+                answer.Description = Description;
+            question.Answer.Add(answer);
+            textBox_Description.Clear();
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -158,15 +166,7 @@ namespace VCE_Designer
 
         private void button2_Click(object sender, EventArgs e)
         {
-            question.Answer = new List<Answer>();
-         
-            string Description = textBox_Description.Text;
-            if (checkBox1.Checked == true)
-                answer.Isright = Description;
-            else
-                answer.Description = Description;
-            question.Answer.Add(answer);
-
+          
         }
     }
 }

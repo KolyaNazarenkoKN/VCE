@@ -16,5 +16,22 @@ namespace VCE_Server
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            using (MyDBContext dBContext = new MyDBContext())
+            {
+              
+                User user = new User() { Name = textBox1.Text, Password = textBox2.Text };
+                dBContext.Users.Add(user);
+                dBContext.SaveChanges();
+                MessageBox.Show("Added");
+            }
+        }
     }
 }
