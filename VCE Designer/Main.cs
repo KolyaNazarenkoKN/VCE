@@ -97,8 +97,8 @@ namespace VCE_Designer
             body.Author = author;
             body.TestName = NameTest;
             question.NameQuestion = NameQuestion;
-  
 
+    
             body.Question.Add(question);
 
 
@@ -106,17 +106,18 @@ namespace VCE_Designer
 
         private void button_nextquestion_Click(object sender, EventArgs e)
         {
+    
 
             Question question = new Question();
-            question.Answer = new List<Answer>();
+
             Answer answer = new Answer();
+
 
             string NameQuestion = textBox_NameQuestion.Text;
             string Description = textBox_Description.Text;
 
-
-            answer.Description = Description;
             question.NameQuestion = NameQuestion;
+            answer.Description = Description;
 
             body.Question.Add(question);
 
